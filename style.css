@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(247, 217, 173);
+    color: rgb(20, 7, 7);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: rgb(245, 208, 151);
+    flex-wrap: wrap; /* Allows the navigation to wrap on small screens */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures the list wraps when there's not enough space */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: white;
+    font-size: 1.08rem;
+}
+
+main hr {
+    border: 0;
+    background-color: black;
+    height: 1.5px;
+    margin: 40px 90px;
+}
+
+.left {
+    font-size: 1.7rem;
+}
+
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px 20px;
+    flex-wrap: wrap; /* Allows the section to adjust for smaller screens */
+}
+
+.firstsection > div {
+    width: 30%;
+    margin-bottom: 20px; /* Adds space between columns on small screens */
+}
+
+.leftsecation {
+    font-size: 3rem;
+}
+
+.rightsection img {
+    width: 90%;
+}
+
+.sm {
+    color: rgb(115, 80, 27);
+}
+
+#element {
+    color: blue;
+}
+
+.secondsection {
+    max-width: 100%;
+    margin: auto;
+    height: auto; /* Let the section height adjust naturally */
+    text-align: center;
+    padding: 10px; /* Add some padding for better layout */
+}
+
+.secondsection .box {
+    width: 100%; /* Ensure the box takes up the full width */
+    margin: 56px 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    gap: 10px; /* Adds spacing between the elements */
+}
+
+.secondsection .vertical {
+    width: 22%; /* Use a smaller width to prevent overflow on larger screens */
+    margin: 10px 0;
+    max-width: 40rem; /* Maximum width for vertical elements */
+    box-sizing: border-box; /* Prevents overflow */
+}
+
+
+.vertical-title {
+    top: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.vertical-desc {
+    font-size: 0.95rem;
+    color: #333;
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(248, 188, 98);
+    height: 233px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    padding: 23px 122px;
+    flex-direction: column; /* Stacks items vertically on small screens */
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .firstsection {
+        flex-direction: column;
+        margin: 50px 10px;
+    }
+
+    .firstsection > div {
+        width: 100%; /* Makes the columns full-width on small screens */
+    }
+
+    .leftsecation {
+        font-size: 2rem;
+    }
+
+    .secondsection {
+        padding: 10px;
+    }
+
+    .secondsection .vertical {
+        width: 45%; /* Adjusts width to better fit smaller screens */
+        margin: 0 10px;
+    }
+
+    footer .footer {
+        padding: 20px 10px;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px; /* Adjusts body font size for smaller screens */
+    }
+
+    nav ul li {
+        margin: 0 8px;
+    }
+
+    .firstsection {
+        margin: 30px 10px;
+    }
+
+    .firstsection > div {
+        width: 100%; /* Ensures full width for smaller screens */
+    }
+
+    .leftsecation {
+        font-size: 1.8rem;
+    }
+
+    .secondsection {
+        padding: 5px;
+    }
+
+    .secondsection .box {
+        width: 100%; /* Ensures the .box takes the full width on mobile */
+        gap: 5px; /* Reduce gap between elements on mobile */
+    }
+
+    .secondsection .vertical {
+        width: 100%; /* Makes vertical elements stack and take full width */
+        margin: 0 10px; /* Adjust margin between vertical items */
+    }
+
+    footer .footer {
+        padding: 15px 10px;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px 10px;
+    }
+}
